@@ -1,0 +1,40 @@
+# Problem Statement1:
+# Is gender independent of education level? A random sample of 395 people were surveyed and each person was asked to report the highest education level they obtained. 
+# The data that resulted from the survey is summarized in the following table:
+#          High School Bachelors Masters Ph.d.     Total
+# Female      60         54       46      41        201
+# Male        40         44       53      57        194
+# Total      100         98       99      98        395
+
+# Question: Are gender and education level dependent at 5% level of significance? In other words, given the data collected above,
+#           Is there a relationship between the gender of an individual and the level of education that they have obtained?
+
+Solution:
+    
+Steps:
+Null Hypothesis: Education and Gender are independent of each other.
+Alternative Hypothesis: Education and Gender are dependent of each other.
+Chi-square test shall be used here.
+The chi-square test statistic is calculated by χ2 = ∑(O−E)^2/E
+O = The observed frequency
+E  = The expected frequency under the null hypothesis and computed by: E = (row total × column total) / sample size
+We will compare the value of the test statistic to the critical value of χ2α with degree of freedom = (r - 1) (c - 1), 
+and reject the null hypothesis if χ2>χ2α.
+
+Determine the table of expected counts:
+        eg) High School Female = (201*100)/395 = 50.886 (we shall get the table as below for rest of the values once calculated)      
+               
+          High School  Bachelors  Masters   Ph.d.   Total
+Female       50.886     49.868    50.377   49.868    201
+Male         49.114     48.132    48.623   48.132    194
+Total          100        98        99       98      395
+
+Calculate the Chi-Square value:         
+        
+        χ2= (60−50.886)^2/50.886 + (54−49.868)^2/49.868 + (46−50.377)^2/50.377 + (41-49.868)^2/49.868 + (54−49.868)^2/49.868 + (40-49.114)^2/49.114 + (44-48.132)^2/48.132 + (53-48.623)^2/48.623 + (57−48.132)^2/48.132 = 8.006
+        χ2= 8.006
+         
+Conclusion:
+        The critical value of χ2 with 3 degree of freedom is 7.815
+        Since 8.006 > 7.815, therefore we reject the null hypothesis
+        Therefore, the education level depends on gender at a 5% level of significance.
